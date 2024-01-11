@@ -1,0 +1,33 @@
+{
+    "Signupfields": [
+        {
+            "id": 1,
+            "name": "fname",
+            "required": true,
+            "placeholder": "First Name",
+            "type": "text"
+        },
+        {
+            "id": 2,
+            "name": "lname",
+            "required": true,
+            "placeholder": "Last Name",
+            "type": "text"
+        },
+        {
+            "id": 3,
+            "name": "email",
+            "required": true,
+            "placeholder": "Email",
+            "type": "email"
+        },
+        {
+            "id": 4,
+            "name": "password",
+            "required": true,
+            "placeholder": "Password",
+            "type": "password",
+            "minLength": 6
+        }
+    ]
+}
