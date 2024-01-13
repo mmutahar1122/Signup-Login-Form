@@ -1,10 +1,25 @@
-import react from "react"
+import react, { useState } from "react"
 import Cart from "./Cart"
 import JsonData from './Dashboard.json'
 import Tiger from './Images/Tiger.jpg'
+import DetailCart from "./DetailCart"
+import { useNavigate } from "react-router-dom"
+import { useEffect } from "react"
 
 const Dashboard=()=>{
+const [selectItem,setSelectItem]=useState();
+const navigate = useNavigate();
 
+const SelectedItem=(item)=>{
+
+    setSelectItem(item)
+
+}
+useEffect(() => {
+    if (selectItem) {
+        navigate('/detail-cart');
+    }
+}, [selectItem]);
 
 const Data = JsonData?.items
     return <div className="p-5">
@@ -33,10 +48,13 @@ const Data = JsonData?.items
             title={item.title}
             description={item.description}
             price={item.price}
+           SelectedItem={()=> SelectedItem(item)}
+
             />
         ))
 }
 </div>
+{ selectItem && <DetailCart item={selectItem}/>} 
     
     </div>
 }
