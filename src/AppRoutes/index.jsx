@@ -7,6 +7,8 @@ import Services from '../Component/Services';
 import Contact from '../Component/Contactus';
 import Header from '../Component/Header';
 import Layout from '../Layout';
+import DetailCart from '../Component/Dashboard/DetailCart';
+
 function AppRoutes() {
 
   return (
@@ -19,6 +21,8 @@ function AppRoutes() {
       
     <Route path='/services' element={<Layout component={Services} header={Header} isNavbar={true}/>}/>
     <Route path='/contact-us' element={<Layout component={Contact} header={Header} isNavbar={true}/>}/>
+    <Route path='/detail-cart' element={<Layout component={DetailCart} header={Header} isNavbar={false}/>}/>
+    
    </Routes>
    
    </BrowserRouter>
