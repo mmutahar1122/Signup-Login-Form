@@ -1,0 +1,36 @@
+{
+   "ContactusFields": [
+    {
+        "id":1,
+        "name":"fname",
+        "required":true,
+        "placeholder":"fname",
+        "type":"text"
+
+    },
+    {
+        "id":2,
+        "name":"lname",
+        "required":true,
+        "placeholder":"lname",
+        "type":"text"
+
+    },
+    {
+        "id":3,
+        "name":"email",
+        "required":true,
+        "placeholder":"email",
+        "type":"email"
+
+    },
+    {
+        "id":4,
+        "name":"description",
+        "required":true,
+        "placeholder":"description...",
+        "type":"text"
+
+    }
+    ]
+}

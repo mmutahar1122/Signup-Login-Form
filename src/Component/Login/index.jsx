@@ -43,7 +43,7 @@ setState(initialState);
 
     return <div className="mt-12">
     <form onSubmit={handleSubmit} className="block w-[500px] px-3 m-auto">
-        <h1 className="font-semibold text-[#BF1017] text-center my-5">Login</h1>
+        <h1 className="font-semibold text-[#BF1017] text-center my-5 text-[32px]">Login</h1>
     {LginFields.Loginfields.map((field)=>{
         return <Input key={field.id}
         id={field.id} 
@@ -57,8 +57,8 @@ setState(initialState);
         />
     })}
 
-<button type="submit" className="focus:outline-none text-white bg-[#BF1017] rounded-md w-full my-1">Login</button>
-    <p className="mt-1">Cannot have an Account? <span onClick={handlNavigate} className="cursor-pointer text-[#BF1017]">Create One</span></p>
+<button type="submit" className="focus:outline-none text-white h-12 bg-[#BF1017] rounded-md w-full my-1">Login</button>
+    <p className="mt-1 text-black">don't have an Account? <span onClick={handlNavigate} className="cursor-pointer text-[#BF1017]">Create One</span></p>
     </form>
 
 </div>

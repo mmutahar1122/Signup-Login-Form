@@ -24,16 +24,16 @@ useEffect(() => {
 }, [selectItem]);
 
 const handleChange=(e)=>{
-    setFilterType(e.target.value)
+    setFilterType(e.target.value.toUpperCase())
 }
 
 // const Data = JsonData?.items
 const regex = new RegExp(filtertype.trim());
-const Data = JsonData?.items?.filter(item => item.title.match(regex));
+const Data = JsonData?.items?.filter(item => item.title.match(filtertype.trim()));
 
 console.log('Data',Data)
 
-    return <div className="p-5">
+    return <div className="max-w-[1440px] m-auto p-2">
     
 <form>   
     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-white sr-only dark:text-white">Search</label>
@@ -48,7 +48,7 @@ console.log('Data',Data)
     </div>
 </form>
 
-    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-x-3 gap-y-3 mt-2">
+    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-x-3 gap-y-8 mt-2">
     
       {
         Data?.map((item,i)=>(
@@ -56,7 +56,7 @@ console.log('Data',Data)
             <Cart 
             key={i}
             image={item.image}
-            title={item.title}
+            title={item.title.toUpperCase()}
             description={item.description}
             price={item.price}
            SelectedItem={()=> SelectedItem(item)}

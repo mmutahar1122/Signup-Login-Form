@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   signUpusers:[],
   loginUser:'',
+  ContactusUser:[],
   isAuthentication:false,
 };
 
@@ -28,9 +29,14 @@ const Slices = createSlice({
         console.log("User nahi mila");
       }
 
+    },
+    ContactusData(state,action){
+      console.log('action.payload',action.payload)
+      state.ContactusUser=action.payload
     }
+
     
   },
 });
 export default Slices;
-export const {Signup,UserforLogin}=Slices.actions
+export const {Signup,UserforLogin,ContactusData}=Slices.actions

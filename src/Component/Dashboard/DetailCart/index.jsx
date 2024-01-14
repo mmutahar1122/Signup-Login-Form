@@ -1,10 +1,16 @@
 import { useLocation } from "react-router-dom";
+import BackArrow from '../../../assets/Images/BackArrow.png'
+import { useNavigate } from "react-router-dom";
 const DetailCart = () => {
     const location=useLocation();
+    const navigate=useNavigate()
 
     const {title,description,price,image}=location.state.selectItem
 
-    return  <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700  m-auto mt-[100px]">
+    return <> 
+    <div className="p-5">
+    <img onClick={()=>navigate(-1)} src={BackArrow} alt="" className="sm:w-10 w-7 cursor-pointer absolute mt-[50px]"/> 
+     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700  m-auto mt-[100px]">
         <a href="#">
             <img className="rounded-t-lg" src={image} alt="" />
         </a>
@@ -22,7 +28,8 @@ const DetailCart = () => {
             </div>
         </div>
     </div>
-    
+    </div>
+    </>
     
 }
 export default DetailCart
