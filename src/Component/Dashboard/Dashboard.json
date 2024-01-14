@@ -3,64 +3,64 @@
 {
     "items": [
         {
-            "image": "http://example.com/sunny_beach.jpg",
-            "title": "Sunny Beach",
-            "description": "A beautiful sunny beach with golden sand and crystal clear waters.",
-            "price":"$500"
+            "image": "https://p7.hiclipart.com/preview/967/334/474/nike-free-shoe-nike-air-max-running-jogging-shoes.jpg",
+            "title": "Nike Show Black Color",
+            "description": "We are Manufacturer of all types of Men's Shoes and Footwear Range like Casual Shoes ",
+            "price":"$200"
         },
         {
-            "image": "http://example.com/mountain_adventure.jpg",
+            "image": "https://p7.hiclipart.com/preview/967/334/474/nike-free-shoe-nike-air-max-running-jogging-shoes.jpg",
             "title": "Mountain Adventure",
             "description": "Breathtaking mountain scenery with adventurous hiking trails.",
-            "price":"$500"
+            "price":"$300"
         },
         {
-            "image": "http://example.com/city_nightlife.jpg",
-            "title": "City Nightlife",
+            "image": "https://p7.hiclipart.com/preview/967/334/474/nike-free-shoe-nike-air-max-running-jogging-shoes.jpg",
+            "title": "Nike Show Black Color",
             "description": "The vibrant city life at night with glowing lights and busy streets.",
             "price":"$500"
         },
         {
-            "image": "http://example.com/ancient_ruins.jpg",
+            "image": "https://p7.hiclipart.com/preview/967/334/474/nike-free-shoe-nike-air-max-running-jogging-shoes.jpg",
             "title": "Ancient Ruins",
             "description": "Mysterious ancient ruins, telling stories of a past civilization.",
-            "price":"$500"
+            "price":"$150"
         },
         {
-            "image": "http://example.com/winter_wonderland.jpg",
+            "image": "https://p7.hiclipart.com/preview/967/334/474/nike-free-shoe-nike-air-max-running-jogging-shoes.jpg",
             "title": "Winter Wonderland",
             "description": "A snowy landscape transforming into a winter wonderland.",
-            "price":"$500"
+            "price":"$250"
         },
         {
-            "image": "http://example.com/desert_oasis.jpg",
-            "title": "Desert Oasis",
+            "image": "https://p7.hiclipart.com/preview/967/334/474/nike-free-shoe-nike-air-max-running-jogging-shoes.jpg",
+            "title": "Nike Show Black Color",
             "description": "A serene oasis in the midst of a vast and hot desert.",
-            "price":"$500"
+            "price":"$170"
         },
         {
-            "image": "http://example.com/tropical_paradise.jpg",
-            "title": "Tropical Paradise",
+            "image": "https://p7.hiclipart.com/preview/967/334/474/nike-free-shoe-nike-air-max-running-jogging-shoes.jpg",
+            "title": "Nike Show Yellow Color",
             "description": "An exotic tropical paradise with lush greenery and colorful birds.",
-            "price":"$500"
+            "price":"$390"
         },
         {
-            "image": "http://example.com/underwater_exploration.jpg",
-            "title": "Underwater Exploration",
+            "image": "https://p7.hiclipart.com/preview/967/334/474/nike-free-shoe-nike-air-max-running-jogging-shoes.jpg",
+            "title": "Nike Show Red Color",
             "description": "Exploring the vibrant and mysterious underwater world.",
-            "price":"$500"
+            "price":"$100"
         },
         {
-            "image": "http://example.com/cosmic_journey.jpg",
+            "image": "https://p7.hiclipart.com/preview/967/334/474/nike-free-shoe-nike-air-max-running-jogging-shoes.jpg",
             "title": "Cosmic Journey",
             "description": "A journey through space, exploring the cosmos and distant galaxies.",
-            "price":"$500"
+            "price":"$230"
         },
         {
-            "image": "http://example.com/forest_retreat.jpg",
-            "title": "Forest Retreat",
+            "image": "https://p7.hiclipart.com/preview/967/334/474/nike-free-shoe-nike-air-max-running-jogging-shoes.jpg",
+            "title": "Nike Show Yellow Color",
             "description": "A peaceful retreat in a dense, green forest, away from the hustle of city life.",
-            "price":"$500"
+            "price":"$220"
         }
     ]
 }

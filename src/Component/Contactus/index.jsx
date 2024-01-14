@@ -1,5 +1,6 @@
 const Contact=()=>{
-    return "Contact US"
+    return     <p className="text-black">"Contact page comming soon"</p>
+
 }
 
 export default Contact

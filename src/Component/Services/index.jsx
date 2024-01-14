@@ -1,5 +1,6 @@
 const Services=()=>{
-    return "Services page coming soon"
+    return     <p className="text-black">"Services page comming soon"</p>
+
 }
 
 export default Services
