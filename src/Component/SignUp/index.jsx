@@ -35,7 +35,6 @@ const navigate=useNavigate();
     }
 
     const handleSubmit=(e)=>{
-        console.log('e',e)
 e.preventDefault();
 dispatch(Signup(state))
 setState(initialState)
@@ -45,7 +44,7 @@ setState(initialState)
 
     return <div className="mt-12">
     <form className="block w-[500px] px-3 m-auto" onSubmit={handleSubmit}>
-        <h1 className="font-semibold text-[#BF1017] text-center my-5">SignUp</h1>
+        <h1 className="font-semibold text-[#BF1017] text-center text-[32px] my-5">SignUp</h1>
         {signupFields.Signupfields.map((field) => {
             return <Input key={field.id}
                 id={field.id} 
@@ -59,8 +58,8 @@ setState(initialState)
             />
         })}
 
-        <button type="submit" class="focus:outline-none text-white bg-[#BF1017] rounded-md w-full my-1">Signup</button>
-        <p className="mt-1">Already have an Account? <span onClick={handlNavigate} className="cursor-pointer text-[#BF1017]">Goto Login</span> </p>
+        <button type="submit" className="focus:outline-none text-white font-semibold bg-[#BF1017] rounded-md w-full h-12 my-1">Signup</button>
+        <p className="mt-1 text-black">Already have an Account? <span onClick={handlNavigate} className="cursor-pointer text-[#BF1017]">Goto Login</span> </p>
     </form>
 </div>
 
