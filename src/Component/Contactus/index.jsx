@@ -39,6 +39,7 @@ name={field.name}
        placeholder={field.placeholder}
        required={field.required}
        type={field.type} 
+       tagname={field.tagname}
        handleChange={handleChange}
        value={state[field.name]}
         />

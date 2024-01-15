@@ -27,6 +27,7 @@
     {
         "id":4,
         "name":"description",
+        "tagname":"textarea",
         "required":true,
         "placeholder":"description...",
         "type":"text"

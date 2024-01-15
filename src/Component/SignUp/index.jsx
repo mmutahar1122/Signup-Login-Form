@@ -58,7 +58,7 @@ setState(initialState)
             />
         })}
 
-        <button type="submit" class="focus:outline-none text-white bg-[#BF1017] rounded-md w-full h-12 my-1">Signup</button>
+        <button type="submit" className="focus:outline-none text-white font-semibold bg-[#BF1017] rounded-md w-full h-12 my-1">Signup</button>
         <p className="mt-1 text-black">Already have an Account? <span onClick={handlNavigate} className="cursor-pointer text-[#BF1017]">Goto Login</span> </p>
     </form>
 </div>
