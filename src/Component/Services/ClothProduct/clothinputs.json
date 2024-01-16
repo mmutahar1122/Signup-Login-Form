@@ -1,0 +1,56 @@
+{
+    "ClothInputs":[
+        {
+            "id":1,
+            "name":"image",
+            "required": true,
+            "type":"file",
+            "maxLength":5
+        },
+        {
+            "id":2,
+            "name":"title",
+            "type":"text",
+            "required": true,
+            "placeholder":"Title",
+            "maxLength":25
+        },
+        {
+            "id":3,
+            "name":"description",
+            "type":"text",
+            "required": true,
+            "placeholder":"Description",
+            "tagname":"textarea"
+        },
+        {
+            "id":4,
+            "name":"color",
+            "type":"text",
+            "required": true,
+            "placeholder":"Color"
+        },  
+         {
+            "id":5,
+            "name":"quantity",
+            "type":"number",
+            "required": true,
+            "placeholder":"Quantity"
+        },
+        {
+            "id":6,
+            "name":"price",
+            "type":"number",
+            "required": true,
+            "placeholder":"Price"
+        },
+        {
+            "id":7,
+            "name":"phone_no",
+            "type":"number",
+            "required": true,
+        "placeholder":"Phone no",
+        "maxLength":11
+        }
+    ]
+}
