@@ -1,9 +1,10 @@
 import AnimalJson from './inputs.json'
 import Input from '../../../Input'
 import { useState, useRef } from 'react'
+import { AnimalCat } from '../../../MyStore/Slices'
+import { useDispatch } from 'react-redux'
 const AnimalProduct=()=>{
     const initialState={
-        image:[''],
         title:'',
         description:'',
         quantity:'',
@@ -14,7 +15,8 @@ const AnimalProduct=()=>{
     const [state,setState]=useState(initialState);
     const [selectedImage, setSelectedImage] = useState(null);
     const inputImageRef=useRef(null);
-console.log(selectedImage)
+    const dispatch=useDispatch();
+
     const handleChange=(e)=>{
         if (e.target.type === 'file') {
             setSelectedImage(URL.createObjectURL(e.target.files[0]))
@@ -28,7 +30,12 @@ console.log(selectedImage)
         }
 
     }
-    const handleSubmit=()=>{
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        dispatch(AnimalCat({state,selectedImage}))
+        setState(initialState);
+        setSelectedImage(null)
+        const request = indexedDB.open("MyTestDatabase", 1);
 
     }
 

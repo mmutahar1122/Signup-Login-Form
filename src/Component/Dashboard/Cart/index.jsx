@@ -1,21 +1,15 @@
 import react from "react"
 
-const Cart=({image,title,description,price,SelectedItem})=>{
-console.log('title',title)
+const Cart=({image,title,description,price,SelectedItem},state)=>{
 
+    console.log('state',state);
 
+    return <div className="w-full h-[440px] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto p-5">
 
-    // if(description.length>30){
-
-    // }
-
-    return <div className="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto p-5">
-    {/* <a href="#"> */}
-        <img className="rounded-lg h-[200px] w-[340px]" src={image} alt="product image"/>
-    {/* </a> */}
+<div className="h-[220px]">   <img className="rounded-lg h-full w-full" src={image} alt="product image"/> </div>
     <div>
         
-            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white mt-2">{title}</h5>
+         <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white overflow-hidden h-[30px]  mt-2">{title}</h5>
         
         <div className="flex items-center mt-2.5 mb-5">
             {/* <div className="flex items-center space-x-1 rtl:space-x-reverse">
@@ -39,7 +33,7 @@ console.log('title',title)
             <p className="text-black h-[75px] overflow-hidden">{description}</p>
         </div>
         <div className="flex items-center justify-between">
-            <span className="text-3xl font-bold text-gray-900 dark:text-white">{price}</span>
+            <span className="text-3xl font-bold text-gray-900 dark:text-white">${price}</span>
             <button onClick={SelectedItem} className="text-white bg-[#BF1017] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Buy Now</button>
         </div>
     </div>

@@ -5,18 +5,21 @@ import Tiger from './Images/Tiger.jpg'
 // import DetailCart from "./DetailCart"
 import { useNavigate } from "react-router-dom"
 import { useEffect } from "react"
+import { useSelector } from "react-redux"
 
 const Dashboard=()=>{
 const [selectItem,setSelectItem]=useState();
 const [filtertype,setFilterType]=useState("")
 const navigate = useNavigate();
+const AllCategory=useSelector(state=>state.Data.AllCategory);
+console.log('--AllCategory---',AllCategory);
 
 const SelectedItem=(item)=>{
-
+console.log('---item---',item);
     setSelectItem(item)
 
+
 }
-console.log('filtertype',filtertype)
 useEffect(() => {
     if (selectItem) {
         navigate('/detail-cart',{state:{selectItem}});
@@ -31,7 +34,6 @@ const handleChange=(e)=>{
 const regex = new RegExp(filtertype.trim());
 const Data = JsonData?.items?.filter(item => item.title.match(filtertype.trim()));
 
-console.log('Data',Data)
 
     return <div className="max-w-[1440px] m-auto p-2">
     
@@ -51,21 +53,20 @@ console.log('Data',Data)
     <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-x-3 gap-y-8 mt-2">
     
       {
-        Data?.map((item,i)=>(
+        AllCategory?.map((item,i)=>(
 
             <Cart 
             key={i}
-            image={item.image}
-            title={item.title.toUpperCase()}
-            description={item.description}
-            price={item.price}
+            image={item.selectedImage}
+            title={item.state.title?.toUpperCase()}
+            description={item.state.description}
+            price={item.state.price}
            SelectedItem={()=> SelectedItem(item)}
 
             />
         ))
 }
 </div>
-{/* { selectItem && <DetailCart item={selectItem}/>}  */}
     
     </div>
 }
