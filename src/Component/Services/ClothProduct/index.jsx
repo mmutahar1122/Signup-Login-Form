@@ -3,6 +3,9 @@ import Input from '../../../Input'
 import { useState } from 'react'
 import { ClothCat } from '../../../MyStore/Slices'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import BackArrow from '../../../assets/Images/BackArrow.png'
+
 const ClothProduct=()=>{
 const initialState={
     title:'',
@@ -16,6 +19,8 @@ const initialState={
 const [state,setState]=useState(initialState);
 const [selectedImage,setSelectedImage]=useState(null);
 const dispatch=useDispatch();
+const navigate=useNavigate();
+
     const handleChange=(e)=>{
 
             if(e.target.type==='file'){
@@ -42,7 +47,10 @@ const dispatch=useDispatch();
     }
 
     return  <div className="max-w-[1440px] m-auto">
-    <div className="mt-12">
+    <div className="md:mt-[100px]">
+    <div>
+            <img onClick={()=>navigate(-1)} src={BackArrow} alt="" className="sm:w-10 w-7 cursor-pointer absolute"/>
+        </div>
     <form onSubmit={handleSubmit} className="block w-[500px] px-3 m-auto">
     {ClothInputs?.ClothInputs?.map((field)=>{
         return <Input key={field.id}
