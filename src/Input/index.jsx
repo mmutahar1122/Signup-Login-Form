@@ -37,10 +37,13 @@ const Input=({id, name, required, placeholder, type, minLength, value, handleCha
     maxLength={maxLength}
     autoComplete={autocomplete}
     className={`text-lg text-black w-full border ${type === 'file' ? 'h-[130px] cursor-pointer':'h-12'} ${type === 'description' ? 'h-[100px] ': 'h-12 '}  my-1 rounded-md p-2 focus:outline-none`}/>\
-   {errMessage && errMessage[name] && 
+   {
+   errMessage && errMessage[name] && 
         <span className="text-[#BF1017] text-sm">{errMessage[name]}</span>
     }
-    { tagname === 'password' && <img src={PasswordHide} alt='' className='h-6 cursor-pointer absolute top-0 right-0 mr-[4%] mt-[3.5%]'/>}
+    { 
+    tagname === 'password' && <img src={PasswordHide} alt='' className='h-6 cursor-pointer absolute top-0 right-0 mr-[4%] mt-[3.5%]'/>
+    }
 
     </div>
 
