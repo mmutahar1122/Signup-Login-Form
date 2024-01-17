@@ -3,19 +3,18 @@
         {
             "id":1,
             "name":"email",
-            "required":true,
             "placeholder":"Email",
-            "type":"email"
+            "type":"text"
 
         },
         {
             "id":2,
             "name":"password",
-            "required":true,
             "placeholder":"Password",
             "type":"password",
             "minLength":6,
-            "autocomplete":false
+            "autocomplete":false,
+            "tagname":"password"
 
 
         }

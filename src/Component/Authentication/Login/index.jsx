@@ -1,11 +1,12 @@
 import react,{useState} from "react"
 import LginFields from './Inputs.json'
-import Input from "../../Input"
-import { UserforLogin } from "../../MyStore/Slices"
+import Input from "../../../Input"
+import { UserforLogin } from "../../../MyStore/Slices"
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
-import Dashboard from "../Dashboard"
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
+import * as yup from 'yup'
 
 const Login=()=>{
     const initialState={
@@ -13,6 +14,7 @@ const Login=()=>{
         password:'',
     }
     const [state,setState]=useState(initialState);
+    const [errMessage,setErrMessage]=useState({});
     const RegisteredUsers=useSelector((state)=>state.Data.signUpusers)
     const dispatch=useDispatch();
     const navigate=useNavigate();
@@ -26,20 +28,40 @@ const Login=()=>{
         })
 
     }
-
-    const handleSubmit=(e)=>{
+const LoginSchema=yup.object({
+    email : yup.string().email('Email must be a valid email').required('Email is Requred'),
+    password : yup.string().required('Password is required'),
+})
+    const handleSubmit= async (e)=>{
 e.preventDefault();
-dispatch(UserforLogin(state));
-const userFound = RegisteredUsers.some(users => users?.email === state?.email && users?.password === state?.password);
-if(userFound){
-    navigate('/dashboard')
-}
-setState(initialState);
-    }
+try{
+    const isValid = await LoginSchema.validate(state, {abortEarly:false});
 
-    const handlNavigate=()=>{
-        navigate('/signup')
+    if(isValid) {
+        dispatch(UserforLogin(state));
+
+        const userFound = RegisteredUsers.some(users => users?.email === state?.email && users?.password === state?.password);
+
+        if(userFound){
+
+            navigate('/dashboard') 
+
+        }
+        setState(initialState);
+        setErrMessage({});
+            }
     }
+    catch(error){
+        // console.log('error',error)
+        const formattedError = error.inner.reduce((acc, curr)=>{
+            acc[curr.path] = curr.message;
+            return acc;
+        })
+        setErrMessage(formattedError);
+
+    }
+}
+console.log('erree',errMessage)
 
     return <div className="mt-12">
     <form onSubmit={handleSubmit} className="block w-[500px] px-3 m-auto">
@@ -49,16 +71,18 @@ setState(initialState);
         id={field.id} 
         name={field.name} 
         value={state[field.name]}
-        required={field.required} 
+        // required={field.required} 
         placeholder={field.placeholder} 
         type={field.type} 
+        tagname={field.tagname}
         minLength={field.minLength}
         handleChange={handleChange}
+        errMessage={errMessage}
         />
     })}
 
 <button type="submit" className="focus:outline-none text-white font-semibold h-12 bg-[#BF1017] rounded-md w-full my-1">Login</button>
-    <p className="mt-1 text-black">don't have an Account? <span onClick={handlNavigate} className="cursor-pointer text-[#BF1017]">Create One</span></p>
+    <p className="mt-1 text-black">don't have an Account? <Link to="/signup"><span className="cursor-pointer text-[#BF1017]">Create One</span></Link></p>
     </form>
 
 </div>

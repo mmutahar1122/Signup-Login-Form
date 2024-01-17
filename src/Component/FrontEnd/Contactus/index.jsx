@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import Input from '../../Input'
+import Input from '../../../Input'
 import ContactusFields from './Inputs.json'
 import { useDispatch } from 'react-redux'
-import { ContactusData } from '../../MyStore/Slices'
+import { ContactusData } from '../../../MyStore/Slices'
 
 const Contact=()=>{
     const initialState={

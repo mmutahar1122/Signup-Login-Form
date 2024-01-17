@@ -1,14 +1,13 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import SignUp from '../Component/SignUp';
-import Login from '../Component/Login';
+import SignUp from '../Component/Authentication/SignUp';
+import Login from '../Component/Authentication/Login';
 import Dashboard from '../Component/Dashboard'
-import About from '../Component/About';
+import About from '../Component/FrontEnd/About';
 import Services from '../Component/Services';
-import Contact from '../Component/Contactus';
+import Contact from '../Component/FrontEnd/Contactus';
 import Header from '../Component/Header';
 import Layout from '../Layout';
 import DetailCart from '../Component/Dashboard/DetailCart';
-
 import AnimalProduct from '../Component/Services/AnimalProduct';
 import ClothProduct from '../Component/Services/ClothProduct';
 import CarProduct from '../Component/Services/CarProduct';
@@ -28,9 +27,7 @@ function AppRoutes() {
     <Route path='/animal-category' element={<Layout component={AnimalProduct} header={Header} isNavbar={false}/>}/>
     <Route path='/cloth-category' element={<Layout component={ClothProduct} header={Header} isNavbar={false}/>}/>
     <Route path='/car-category' element={<Layout component={CarProduct} header={Header} isNavbar={false}/>}/>
-    
    </Routes>
-   
    </BrowserRouter>
   )
 }
