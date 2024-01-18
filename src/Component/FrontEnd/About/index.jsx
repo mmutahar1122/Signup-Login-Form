@@ -1,5 +1,3 @@
-
-
 const About=()=>{
     return <>
    <div className="text-black text-[32px] font-semibold text-center mt-[100px]">
