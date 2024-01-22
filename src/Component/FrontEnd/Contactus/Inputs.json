@@ -21,7 +21,7 @@
         "name":"email",
         "required":true,
         "placeholder":"email",
-        "type":"email"
+        "type":"text"
 
     },
     {

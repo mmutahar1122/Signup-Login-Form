@@ -1,6 +1,11 @@
+import { useState } from 'react'
 import PasswordHide from '../assets/Images/EyeIcon.png'
 const Input=({id, name, required, placeholder, type, minLength, value, handleChange, autocomplete, tagname, maxLength, errMessage})=>{
     console.log('errMessage',errMessage)
+    const [show, setShow]=useState(false);
+    const ShowHideHandler=()=>{
+        setShow((show)=>!show)
+    }
     return <>
     {tagname === 'textarea' ? 
      <div className="my-2">
@@ -30,7 +35,7 @@ const Input=({id, name, required, placeholder, type, minLength, value, handleCha
     name={name} 
     placeholder={placeholder} 
     required={required} 
-    type={type} 
+    type={!show && type} 
     minLength={minLength} 
     onChange={handleChange} 
     value={value}  
@@ -42,7 +47,7 @@ const Input=({id, name, required, placeholder, type, minLength, value, handleCha
         <span className="text-[#BF1017] text-sm">{errMessage[name]}</span>
     }
     { 
-    tagname === 'password' && <img src={PasswordHide} alt='' className='h-6 cursor-pointer absolute top-0 right-0 mr-[4%] mt-[3.5%]'/>
+    tagname === 'password' && <img onClick={ShowHideHandler} src={PasswordHide} alt='' className='h-6 cursor-pointer absolute top-0 right-0 mr-[4%] mt-[3.5%]'/>
     }
 
     </div>

@@ -14,7 +14,8 @@ const CarProduct=()=>{
         color:'',
         quantity:'',
         price:'',
-        phone_no:''
+        phone_no:'',
+        category:'car',
     }
     
     const [state,setState]=useState(initialState);

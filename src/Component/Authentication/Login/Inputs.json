@@ -4,7 +4,8 @@
             "id":1,
             "name":"email",
             "placeholder":"Email",
-            "type":"text"
+            "type":"text",
+            "required":true
 
         },
         {
@@ -14,7 +15,8 @@
             "type":"password",
             "minLength":6,
             "autocomplete":false,
-            "tagname":"password"
+            "tagname":"password",
+            "required":true
 
 
         }

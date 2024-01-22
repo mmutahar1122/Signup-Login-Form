@@ -12,6 +12,7 @@ const AnimalProduct=()=>{
         quantity:'',
         price:'',
         phone_no:'',
+        category:'animals',
 
     }
     const [state,setState]=useState(initialState);
