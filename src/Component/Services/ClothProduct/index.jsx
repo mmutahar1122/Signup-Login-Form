@@ -13,7 +13,9 @@ const initialState={
     color:'',
     quantity:'',
     price:'',
-    phone_no:''
+    phone_no:'',
+    category:'cloth',
+
 }
 
 const [state,setState]=useState(initialState);

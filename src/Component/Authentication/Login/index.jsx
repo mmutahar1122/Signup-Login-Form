@@ -29,7 +29,7 @@ const Login=()=>{
 
     }
 const LoginSchema=yup.object({
-    email : yup.string().email('Email must be a valid email').required('Email is Requred'),
+    email : yup.string().email('Email must be a valid email').required('Email is Required'),
     password : yup.string().required('Password is required'),
 })
     const handleSubmit= async (e)=>{
@@ -46,6 +46,8 @@ try{
 
             navigate('/dashboard') 
 
+        }else{
+            alert("User Not Found")
         }
         setState(initialState);
         setErrMessage({});
@@ -56,7 +58,7 @@ try{
         const formattedError = error.inner.reduce((acc, curr)=>{
             acc[curr.path] = curr.message;
             return acc;
-        })
+        },{})
         setErrMessage(formattedError);
 
     }

@@ -4,19 +4,22 @@
             "id": 1,
             "name": "fname",
             "placeholder": "First Name",
-            "type": "text"
+            "type": "text",
+            "required":true
         },
         {
             "id": 2,
             "name": "lname",
             "placeholder": "Last Name",
-            "type": "text"
+            "type": "text",
+            "required":true
         },
         {
             "id": 3,
             "name": "email",
             "placeholder": "Email",
-            "type": "text"
+            "type": "text",
+            "required":true
         },
         {
             "id": 4,
@@ -24,7 +27,8 @@
             "placeholder": "Password",
             "type": "password",
             "minLength": 6,
-            "tagname":"password"
+            "tagname":"password",
+            "required":true
         }
     ]
 }

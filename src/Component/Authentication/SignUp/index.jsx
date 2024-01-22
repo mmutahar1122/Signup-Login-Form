@@ -39,7 +39,7 @@ const dispatch=useDispatch();
         fname: yup.string().required('First name is required'),
         lname: yup.string().required('Last name is required'),
         email: yup.string().email('Email must be a valid email').required('Email is required'),
-        password: yup.string().required('Password is required').min(6, 'Password must be at least 6 characters')
+        password: yup.string().min(6, 'Password must be at least 6 characters').required('Password is required')
     });
     
     const handleSubmit= async (e)=>{
@@ -60,7 +60,7 @@ try{
         return acc;
     }, {});
     setErrMessage(formattedErrors)
-    console.log("Invalid signUp Data")
+    console.log("Invalid signUp Data",formattedErrors)
 
 }
 
@@ -75,7 +75,7 @@ try{
             return <Input key={field.id}
                 id={field.id} 
                 name={field.name} 
-                required={field.required} 
+                // required={field.required} 
                 placeholder={field.placeholder} 
                 type={field.type}   
                 // minLength={field.minLength} 
