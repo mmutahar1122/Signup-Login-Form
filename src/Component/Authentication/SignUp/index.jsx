@@ -5,6 +5,7 @@ import Input from "../../../Input";
 import { Signup } from "../../../MyStore/Slices";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const SignUp=()=>{
     const initialState={
         fname:'',
@@ -15,6 +16,7 @@ const SignUp=()=>{
 const [state,setState]=useState(initialState);
 const [errMessage,setErrMessage]=useState({});
 const dispatch=useDispatch();
+const navigate=useNavigate();
 
     const handleChange= (e)=>{
 
@@ -51,6 +53,7 @@ try{
         dispatch(Signup(state))
         setState(initialState)
         setErrMessage({})
+        navigate('/dashboard')
         console.log("signUp Succefully")
 
     }
