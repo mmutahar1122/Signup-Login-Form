@@ -50,10 +50,10 @@ const navigate=useNavigate();
 
     return  <div className="max-w-[1440px] m-auto">
     <div className="md:mt-[100px]">
-    <div>
-            <img onClick={()=>navigate(-1)} src={BackArrow} alt="" className="sm:w-10 w-7 cursor-pointer absolute"/>
+    <div className='h-12 shadow flex items-center'>
+            <img onClick={()=>navigate(-1)} src={BackArrow} alt="" className="sm:w-10 w-7 cursor-pointer absolute ml-[2%]"/>
         </div>
-    <form onSubmit={handleSubmit} className="block w-[500px] px-3 m-auto">
+    <form onSubmit={handleSubmit} className="block md:w-[500px] md:px-3 px-1 m-auto">
     {ClothInputs?.ClothInputs?.map((field)=>{
         return <Input key={field.id}
         id={field.id} 

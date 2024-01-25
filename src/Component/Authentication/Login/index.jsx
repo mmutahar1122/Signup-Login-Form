@@ -66,7 +66,7 @@ try{
 console.log('erree',errMessage)
 
     return <div className="mt-12">
-    <form onSubmit={handleSubmit} className="block w-[500px] px-3 m-auto">
+    <form onSubmit={handleSubmit} className="block md:w-[500px] px-1 md:px-3 m-auto">
         <h1 className="font-semibold text-[#BF1017] text-center my-5 text-[32px]">Login</h1>
     {LginFields.Loginfields.map((field)=>{
         return <Input key={field.id}
@@ -84,7 +84,7 @@ console.log('erree',errMessage)
     })}
 
 <button type="submit" className="focus:outline-none text-white font-semibold h-12 bg-[#BF1017] rounded-md w-full my-1">Login</button>
-    <p className="mt-1 text-black">don't have an Account? <Link to="/signup"><span className="cursor-pointer text-[#BF1017]">Create One</span></Link></p>
+    <p className="mt-1 md:text-base text-sm text-black">don't have an Account? <Link to="/signup"><span className="cursor-pointer text-[#BF1017]">Create One</span></Link></p>
     </form>
 
 </div>

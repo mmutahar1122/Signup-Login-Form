@@ -72,7 +72,7 @@ try{
 
 
     return <div className="mt-12">
-    <form className="block w-[500px] px-3 m-auto" onSubmit={handleSubmit}>
+    <form className="block md:w-[500px] md:px-3 m-auto px-1" onSubmit={handleSubmit}>
         <h1 className="font-semibold text-[#BF1017] text-center text-[32px] my-5">SignUp</h1>
         {signupFields.Signupfields.map((field) => {
             return <Input key={field.id}
@@ -91,7 +91,7 @@ try{
             {/* <p className="mt-1 text-black h-10 b">{errMessage.lname}</p> */}
 
         <button type="submit" className="focus:outline-none text-white font-semibold bg-[#BF1017] rounded-md w-full h-12 my-1">Signup</button>
-      <p className="mt-1 text-black">Already have an Account? <Link to="/"><span className="cursor-pointer text-[#BF1017]">Goto Login</span></Link> </p>
+      <p className="mt-1 md:text-base text-sm text-black">Already have an Account? <Link to="/"><span className="cursor-pointer text-[#BF1017]">Goto Login</span></Link> </p>
     </form>
 </div>
 
